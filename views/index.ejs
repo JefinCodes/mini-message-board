@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Message Board</title>
+</head>
+<body>
+    <% for (let i = 0; i < messages.length; i++) { %>
+        <div>
+            <div><strong>Message: </strong><%= messages[i].text %></div>
+            <div><strong>User: </strong><%= messages[i].user %></div>
+        </div>
+    <% } %>
+</body>
+</html>
