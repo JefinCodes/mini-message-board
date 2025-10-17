@@ -8,7 +8,7 @@
 <body>
     <% for (let i = 0; i < messages.length; i++) { %>
         <div>
-            [<%= messages[i].user %>] <%= messages[i].text %>
+            [<%= messages[i].user %>] <a href="/message/<%= i %>"><%= messages[i].text %></a>
         </div>
     <% } %>
 </body>
