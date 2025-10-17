@@ -14,6 +14,11 @@ app.use("/", indexRouter);
 app.use("/message", messageRouter);
 app.get("{*splat}", display404Page);
 
+app.use((err, req, res, next) => {
+    // console.error(err);
+    res.status(500).send(err.message);
+});
+
 const PORT = 3000;
 app.listen(PORT, (error) => {
     if (error) {
